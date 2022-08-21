@@ -1,0 +1,42 @@
+@use "../../scss/mixins.scss" as mixin;
+@use "../../scss/colors/slate.scss" as slate;
+
+.animal-container {
+  padding: 2rem 1rem;
+  @include mixin.border;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  .ac-latinname {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  .ac-moreinfo {
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-radius: 8px;
+    @include mixin.border;
+
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+
+    transition: background-color 0.5s, color 0.5s;
+    
+    &:hover {
+      background-color: slate.$c6;
+      color: slate.$c1;
+    }
+  }
+}

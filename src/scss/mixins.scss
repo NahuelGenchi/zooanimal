@@ -1,4 +1,4 @@
-@use "./colors/emerald.scss" as emerald;
+@use "./colors/slate.scss" as slate;
 @use "./variables.scss" as v;
 
 @mixin flex-center($justify-content: center, $align-items: center, $flex-direction: row) {
@@ -8,6 +8,6 @@
   align-items: $align-items;
 }
 
-@mixin border($property: border, $color: emerald.$c6) {
+@mixin border($property: border, $color: slate.$c3) {
   #{$property}: $color v.$standard-border;
 }

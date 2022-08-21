@@ -15,15 +15,16 @@ const AnimalList = () => {
     }, []
   );
 
-  console.log(animals);
   return(
-    <div>
-      {animals?.map((animal, index) => {
-        return(
-          <Animal name={animal.name} key={index}/>
-        );
-      })}
-    </div>
+    <main className="main">
+      <div className="m-container">
+        {animals?.map((animal, index) => {
+          return(
+            <Animal animalData={{...animal}} key={index}/>
+          );
+        })}
+      </div>
+    </main>
   );
 };
 
