@@ -28,7 +28,7 @@
       }
     }
 
-    .nc-button {
+    .ncs-button {
       @include mixin.flex-center;
 
       cursor: pointer;
@@ -39,5 +39,50 @@
         color: slate.$c0;
       }
     }
+
+    .ncs-menu {
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      padding: 2.5rem 0;
+
+      display: none;
+
+      background-color: slate.$c9;
+      animation: fade-in 150ms forwards;
+
+      .ncsm-container {
+        width: 85vw;
+        margin: 0 auto;
+        border: 1px solid white;
+
+        .ncsmc-top {
+          position: relative;
+
+          @include mixin.flex-center($justify-content: flex-end);
+
+          .ncs-logo {
+            width: fit-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
