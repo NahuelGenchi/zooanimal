@@ -6,7 +6,7 @@ import "./Animal.scss";
 const Animal = ({animalData}) => {
   const [toggleAnimalInfo, setToggleAnimalInfo] = useState(false);
 
-  const {
+  let {
     active_time,
     animal_type,
     diet,
@@ -22,6 +22,12 @@ const Animal = ({animalData}) => {
     weight_max,
     weight_min
   } = animalData;
+
+  length_min = Number(length_min);
+  length_max = Number(length_max);
+  lifespan = Number(lifespan);
+  weight_max = Number(weight_max);
+  weight_min = Number(weight_min);
 
   const toggleAnimalInfoDisplay = () => {
     toggleAnimalInfo === false ? setToggleAnimalInfo(true) : setToggleAnimalInfo(false);
@@ -49,7 +55,20 @@ const Animal = ({animalData}) => {
             <h1>{name}</h1>
             <span className="ac-latinname">{latin_name}</span>
             <div className="acicm-data">
-              <span>Animal type: {animal_type}</span>
+              <h3>Animal type:</h3>
+              <span>{animal_type}</span>
+              <h3>Diet:</h3>
+              <span>{diet}</span>
+              <h3>Geography range:</h3>
+              <span>{geo_range}</span>
+              <h3>Habitat:</h3>
+              <span>{habitat}</span>
+              <h3>Lifespan:</h3>
+              <span>{lifespan} years</span>
+              <h3>Average weight:</h3>
+              <span>{Math.ceil(weight_min + weight_max) / 2} pounds</span>
+              <h3>Average length:</h3>
+              <span>{Math.ceil(length_min + length_max) / 2} feet</span>
             </div>
           </article>
         </div>
