@@ -1,0 +1,43 @@
+@use "../../scss/colors/slate.scss" as slate;
+@use "../../scss/mixins.scss" as mixin;
+
+.navbar-container {
+  padding: 2.5rem 0;
+
+  background-color: slate.$c8;
+
+  .nc-subcontainer {
+    width: 85vw;
+    margin: 0 auto;
+    
+    @include mixin.flex-center($justify-content: space-between);
+
+    .ncs-logo {
+
+      @include mixin.flex-center($justify-content: flex-start);
+      gap: 0.7rem;
+
+      img {
+        width: 1.5rem;
+      }
+
+      a {
+        color: slate.$c0;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+
+    .nc-button {
+      @include mixin.flex-center;
+
+      cursor: pointer;
+
+      ion-icon {
+        font-size: 1.5rem;
+
+        color: slate.$c0;
+      }
+    }
+  }
+}
