@@ -1,0 +1,21 @@
+@use "../../scss/colors/slate.scss" as slate;
+
+.footer {
+  padding: 3rem 0;
+
+  background-color: slate.$c9;
+  color: slate.$c0;
+
+  font-size: 0.8rem;
+
+  .footer-container {
+    width: 85vw;
+    margin: 0 auto;
+
+    .fc-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}

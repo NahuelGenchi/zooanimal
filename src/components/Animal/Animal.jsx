@@ -63,6 +63,8 @@ const Animal = ({animalData}) => {
               <span>{geo_range}</span>
               <h3>Habitat:</h3>
               <span>{habitat}</span>
+              <h3>Active time:</h3>
+              <span>{active_time}</span>
               <h3>Lifespan:</h3>
               <span>{lifespan} years</span>
               <h3>Average weight:</h3>
