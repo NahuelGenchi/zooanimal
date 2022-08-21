@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 1rem;
 
-  img {
+  .ac-img {
     width: 100%;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -38,5 +38,106 @@
       background-color: slate.$c6;
       color: slate.$c1;
     }
+  }
+
+  .ac-info {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 2.5rem 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow-y: scroll;
+
+    background-color: slate.$c1;
+    color: slate.$c9;
+    animation: fade-in 150ms forwards;
+
+    .aci-container {
+      width: 85vw;
+      margin: 0 auto;
+
+      .acic-top {
+        @include mixin.border($property: border-bottom);
+        padding-bottom: 2rem;
+        position: relative;
+
+        display: flex;
+        justify-content: flex-end;
+
+        .acict-logo {
+          width: fit-content;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+
+          @include mixin.flex-center($justify-content: flex-start);
+          gap: 0.7rem;
+
+          img {
+            width: 1.5rem;
+          }
+
+          span {
+            font-weight: 700;
+
+            cursor: default;
+          }
+        }
+
+        .acict-button {
+          border: none;
+
+          @include mixin.flex-center;
+
+          background-color: inherit;
+          outline: none;
+          cursor: pointer;
+
+          ion-icon {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .acic-main {
+        margin: 3rem 0;
+        padding: 2rem 1rem;
+        @include mixin.border;
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        img {
+          width: 100%;
+          margin-bottom: 1rem;
+          border-radius: 8px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .acicm-data {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
