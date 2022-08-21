@@ -1,9 +1,10 @@
-import { Navbar } from "./components";
+import { Navbar, AnimalList } from "./components";
 
 function App() {
   return (
     <>
       <Navbar/>
+      <AnimalList/>
     </>
   );
 }
