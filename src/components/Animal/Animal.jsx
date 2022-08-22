@@ -34,10 +34,32 @@ const Animal = ({animalData}) => {
 
   return(
     <div className="animal-container">
-      <img className="ac-img" src={image_link} alt={name}/>
-      <h2>{name}</h2>
-      <span className="ac-latinname">{latin_name}</span>
-      <button className="ac-moreinfo" onClick={toggleAnimalInfoDisplay}>More information</button>
+      <div className="ac-img-container">
+        <img className="ac-img" src={image_link} alt={name}/>
+      </div>
+      <div className="ac-content">
+        <h2>{name}</h2>
+        <span className="ac-latinname">{latin_name}</span>
+        <div className="acc-data">
+          <h3>Animal type:</h3>
+          <span>{animal_type}</span>
+          <h3>Diet:</h3>
+          <span>{diet}</span>
+          <h3>Geography range:</h3>
+          <span>{geo_range}</span>
+          <h3>Habitat:</h3>
+          <span>{habitat}</span>
+          <h3>Active time:</h3>
+          <span>{active_time}</span>
+          <h3>Lifespan:</h3>
+          <span>{lifespan} years</span>
+          <h3>Average weight:</h3>
+          <span>{Math.ceil(weight_min + weight_max) / 2} pounds</span>
+          <h3>Average length:</h3>
+          <span>{Math.ceil(length_min + length_max) / 2} feet</span>
+        </div>
+        <button className="ac-moreinfo" onClick={toggleAnimalInfoDisplay}>More information</button>
+      </div>
       <div className="ac-info" style={{ display: toggleAnimalInfo === false ? "none" : "initial" }}>
         <div className="aci-container">
           <div className="acic-top">

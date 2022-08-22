@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="ncsmc-top">
               <div className="ncs-logo">
                 <img src={macaw} alt="Zoo Animals logo" />
-                <a href="/">Zoo Animals</a>
+                <Link to="/" onClick={toggleMenuDisplay}>Zoo Animals</Link>
               </div>
               <div className="ncs-button" onClick={toggleMenuDisplay}>
                 <ion-icon name="close"></ion-icon>
