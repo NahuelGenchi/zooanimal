@@ -57,7 +57,6 @@
       .ncsm-container {
         width: 85vw;
         margin: 0 auto;
-        border: 1px solid white;
 
         .ncsmc-top {
           position: relative;
@@ -71,6 +70,18 @@
             left: 0;
             right: 0;
             margin: 0 auto;
+          }
+        }
+
+        .ncsmc-main {
+          margin-top: 7rem;
+          @include mixin.flex-center($flex-direction: column);
+          gap: 2rem;
+
+          a {
+            color: slate.$c0;
+            text-decoration: none;
+            font-size: 0.9rem;
           }
         }
       }

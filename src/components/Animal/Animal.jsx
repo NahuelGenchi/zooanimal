@@ -12,7 +12,6 @@ const Animal = ({animalData}) => {
     diet,
     geo_range,
     habitat,
-    id,
     image_link,
     latin_name,
     length_max,

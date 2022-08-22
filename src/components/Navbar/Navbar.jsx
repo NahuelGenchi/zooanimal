@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 import macaw from "../../assets/macaw.png";
 import "./Navbar.scss";
@@ -10,12 +11,21 @@ const Navbar = () => {
     toggleMenu === false ? setToggleMenu(true) : setToggleMenu(false);
   };
 
+  const categories = [
+    "Amphibian",
+    "Bird",
+    "Fish",
+    "Mammal",
+    "Marsupial",
+    "Reptile",
+  ];
+
   return(
     <div className="navbar-container">
       <div className="nc-subcontainer">
         <div className="ncs-logo">
           <img src={macaw} alt="Zoo Animals logo" />
-          <a href="/">Zoo Animals</a>
+          <Link to="/">Zoo Animals</Link>
         </div>
         <div className="ncs-button" onClick={toggleMenuDisplay}>
           <ion-icon name="menu"></ion-icon>
@@ -31,6 +41,13 @@ const Navbar = () => {
                 <ion-icon name="close"></ion-icon>
               </div>
             </div>
+            <nav className="ncsmc-main">
+              {categories.map((category, index) => {
+                return(
+                  <NavLink to={`/category/${category}`} key={index} onClick={toggleMenuDisplay}>{category.toLocaleUpperCase()}</NavLink>
+                );
+              })}
+            </nav>
           </div>
         </div>
       </div>
