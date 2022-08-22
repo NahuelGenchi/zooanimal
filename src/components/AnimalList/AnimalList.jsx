@@ -24,14 +24,12 @@ const AnimalList = () => {
   useEffect(
     () => {
       setAnimalsCategory(animals?.filter((animal) => animal.animal_type === categoryId));
-      console.log(categoryId);
     }, [animals]
   );
 
   useEffect(
     () => {
       setAnimalsCategory(animals?.filter((animal) => animal.animal_type === categoryId));
-      console.log(categoryId);
     }, [categoryId]
   );
 
