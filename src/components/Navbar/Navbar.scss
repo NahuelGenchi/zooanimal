@@ -28,6 +28,10 @@
       }
     }
 
+    .ncs-menu-desktop {
+      display: none
+    }
+
     .ncs-button {
       @include mixin.flex-center;
 
@@ -78,6 +82,11 @@
           @include mixin.flex-center($flex-direction: column);
           gap: 2rem;
 
+          .active {
+            font-weight: 700;
+            color: slate.$c0;
+          }
+
           a {
             color: slate.$c0;
             text-decoration: none;
@@ -95,5 +104,43 @@
   }
   100% {
     opacity: 100;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .navbar-container {
+    .nc-subcontainer {
+      .ncs-menu-desktop {
+        display: initial;
+
+        ul {
+          display: flex;
+          gap: 1rem;
+
+          list-style-type: none;
+
+          li {
+            .active {
+              font-weight: 700;
+              color: slate.$c0;
+            }
+
+            a {
+              color: slate.$c3;
+              text-decoration: none;
+
+              transition: color 0.5s;
+
+              &:hover {
+                color: slate.$c0;
+              }
+            }
+          }
+        }
+      }
+      .ncs-button {
+        display: none;
+      }
+    }
   }
 }
