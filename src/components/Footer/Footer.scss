@@ -1,4 +1,5 @@
 @use "../../scss/colors/slate.scss" as slate;
+@use "../../scss/mixins.scss" as mixin;
 
 .footer {
   padding: 3rem 0;
@@ -42,6 +43,31 @@
 
       a {
         color: slate.$c0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .footer {
+    .footer-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      .fc-links {
+        margin-bottom: initial;
+        position: absolute;
+        right: 0;
+
+        a {
+          @include mixin.flex-center;
+        }
+      }
+
+      .fc-info {
+        flex-direction: row;
       }
     }
   }
