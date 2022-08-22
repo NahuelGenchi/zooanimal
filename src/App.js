@@ -6,8 +6,8 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/zooanimal" element={<AnimalList/>}/>
-        <Route path="/zooanimal/category/:categoryId" element={<AnimalList/>}/>
+        <Route path="/" element={<AnimalList/>}/>
+        <Route path="/category/:categoryId" element={<AnimalList/>}/>
         <Route path="*" element={<AnimalList/>}/>
       </Routes>
       <Footer/>

@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="nc-subcontainer">
         <div className="ncs-logo">
           <img src={macaw} alt="Zoo Animals logo" />
-          <Link to="/zooanimal">Zoo Animals</Link>
+          <Link to="/">Zoo Animals</Link>
         </div>
         <div className="ncs-button" onClick={toggleMenuDisplay}>
           <ion-icon name="menu"></ion-icon>
@@ -44,7 +44,7 @@ const Navbar = () => {
             <nav className="ncsmc-main">
               {categories.map((category, index) => {
                 return(
-                  <NavLink to={`/zooanimal/category/${category}`} key={index} onClick={toggleMenuDisplay}>{category.toLocaleUpperCase()}</NavLink>
+                  <NavLink to={`/category/${category}`} key={index} onClick={toggleMenuDisplay}>{category.toLocaleUpperCase()}</NavLink>
                 );
               })}
             </nav>
