@@ -69,6 +69,12 @@
 
       .fc-info {
         flex-direction: row;
+        gap: 0;
+
+        span:first-child::after {
+          content: "|";
+          margin: 0 1rem;
+        }
       }
     }
   }
