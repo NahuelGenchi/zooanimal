@@ -2,6 +2,7 @@
 @use "../../scss/mixins.scss" as mixin;
 
 .footer {
+  min-height: 10vh;
   padding: 3rem 0;
 
   background-color: slate.$c9;

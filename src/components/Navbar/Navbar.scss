@@ -2,6 +2,7 @@
 @use "../../scss/mixins.scss" as mixin;
 
 .navbar-container {
+  min-height: 10vh;
   padding: 2.5rem 0;
 
   background-color: slate.$c8;
